@@ -3,7 +3,9 @@
     "target": "es5",
     "baseUrl": "src",
     "paths": {
-      "src/*":["src/*"],
+      "src/*": [
+        "src/*"
+      ],
     },
     "lib": [
       "dom",

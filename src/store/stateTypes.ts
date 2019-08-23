@@ -16,3 +16,12 @@ export type IStoreState = {
 export const defaultState: IStoreState = {
   userName: ''
 }
+
+export type IRouterItem = {
+  path: string,
+  component: any,
+  exact: boolean,
+  key: string,
+}
+
+export type IRouteConfig = Array<IRouterItem>
