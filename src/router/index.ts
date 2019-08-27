@@ -1,7 +1,5 @@
-import Loadable from 'react-loadable';
-import Loading from 'components/loading/Loading';
-import { IRouteConfig } from 'store/stateTypes';
-
+import { asyncLoad, generateRouteConfig } from './routeUtil';
+// 一级路由 配置页面
 const routeConfig: any = [
   {
     path: '/login',
@@ -10,33 +8,12 @@ const routeConfig: any = [
   {
     path: '/signup',
     component: asyncLoad(() => import('views/login/signup')),
+  },
+  {
+    path: '/', // 这里面包含的都是些 有公共头和尾部的组件 里面应该是 文章列表 文章详情页。。。
+    exact: false, // 这里不需要严格匹配
+    component: asyncLoad(() => import('views/common'))
   }
 ];
-
-function generateRouteConfig(route: IRouteConfig) {
-  return route.map(item => {
-    return {
-      key: item.path,
-      exact: typeof item.exact === 'undefined' ? true : item.exact,
-      ...item,
-      component: item.component,
-    };
-  });
-}
-
-function asyncLoad(loader: () => Promise<any>) {
-  return Loadable({
-    loader,
-    loading: props => {
-      if (props.pastDelay) {
-        return Loading({ text: '按需加载。。。' });
-      } else {
-        return null;
-      }
-    },
-    delay: 500,
-  });
-}
-
 
 export default generateRouteConfig(routeConfig);
