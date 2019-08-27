@@ -5,7 +5,7 @@ import { IRouteConfig } from 'store/stateTypes';
 const routeConfig: any = [
   {
     path: '/login',
-    component: asyncLoad(() => import('views/login')),
+    component: asyncLoad(() => import('views/login/signin')),
   },
   {
     path: '/signup',
