@@ -7,9 +7,8 @@
   border-bottom: 1px solid #eee;
   .header-content-center {
     width: 1060px;
-    height: 100%;
     margin: 0 auto;
-    line-height: 70px;
+    @include lineHeight(70px);
     .header-content-ul {
       display: inline-block;
       height: 100%;
@@ -53,8 +52,7 @@
     .header-content-write {
       float: right;
       margin: 15px 20px;
-      height: 40px;
-      line-height: 40px;
+      @include lineHeight(40px);
       width: 80px;
       text-align: center;
       font-size: 18px;

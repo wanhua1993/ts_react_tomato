@@ -2,11 +2,11 @@ import { asyncLoad, generateRouteConfig } from './routeUtil';
 // 一级路由 配置页面
 const routeConfig: any = [
   {
-    path: '/login',
+    path: '/signIn',
     component: asyncLoad(() => import('views/login/signin')),
   },
   {
-    path: '/signup',
+    path: '/signUp',
     component: asyncLoad(() => import('views/login/signup')),
   },
   {

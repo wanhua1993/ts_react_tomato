@@ -1,2 +1,7 @@
 // 存放一些公共的变量 或者 minx方法 供外界调用
 $basic-color: #ea5147;
+
+@mixin lineHeight($h) {
+  height: $h;
+  line-height: $h;
+}

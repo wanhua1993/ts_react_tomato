@@ -8,6 +8,9 @@ type headerProps = {
 }
 
 class Index extends Component<headerProps> {
+  // constructor(props: headerProps) {
+  //   super(props);
+  // }
   componentDidMount() {
     console.log(this.props);
   }
