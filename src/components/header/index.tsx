@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import logo from 'assets/image/logo.png';
 
 import './index.scss';
 
@@ -19,7 +20,10 @@ class Index extends Component<headerProps> {
     return (
       <div className='header-content'>
         <div className='header-content-center'>
-          <h1 className='header-content-title'>番茄简记</h1>
+          <h1 className='header-content-title'>
+            <img src={logo} alt=""/>
+            番茄简记
+            </h1>
           <ul className='header-content-ul'>
             <li className='header-content-li'>首页</li>
             <li className='header-content-li'>故事</li>

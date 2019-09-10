@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { loginIn } from 'api/login';
+import logo from 'assets/image/logo.png';
 import './index.scss';
 
 interface signInprops {
@@ -19,6 +20,9 @@ export default class SignIn extends Component<signInprops> {
     return (
       <div className='signIn-content'>
         <div className='signIn-border'></div>
+        <div className='signIn-logo'>
+          <img src={logo} alt=""/>
+        </div>
         <div className='signIn-center'>
           <div className='signIn-box'>
             <input type="text" placeholder='手机号、邮箱或用户名' />

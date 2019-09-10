@@ -13,7 +13,7 @@ export default class SignUp extends Component<signUpProps, signUpState> {
   // constructor(props: signUpProps) {
   //   super(props);
   // }
-  state = {
+  state: signUpState = {
     way: 0, // 0 --- 手机号注册   1 --- 邮箱注册
     time: 60,
     timer: 0
