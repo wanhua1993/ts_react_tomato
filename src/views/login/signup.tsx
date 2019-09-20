@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from 'assets/image/logo.png';
 import './index.scss';
 
 interface signUpState {
@@ -63,6 +64,9 @@ export default class SignUp extends Component<signUpProps, signUpState> {
     return (
       <div className='signIn-content'>
         <div className='signIn-border'></div>
+        <div className='signIn-logo'>
+          <img src={logo} alt=""/>
+        </div>
         <div className='signIn-center'>
           <div className='signIn-box' style={{ display: way ? 'none' : 'block' }}>
             <input type="text" placeholder='手机号' />

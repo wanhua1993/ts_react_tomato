@@ -10,6 +10,10 @@ const routeConfig: any = [
     component: asyncLoad(() => import('views/login/signup')),
   },
   {
+    path: '/editor',
+    component: asyncLoad(() => import('views/editor')),
+  },
+  {
     path: '/', // 这里面包含的都是些 有公共头和尾部的组件 里面应该是 文章列表 文章详情页。。。
     exact: false, // 这里不需要严格匹配
     component: asyncLoad(() => import('views/common'))
